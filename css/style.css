@@ -1,0 +1,88 @@
+*{
+    font-family: sans-serif,'Segoe UI';
+    margin:0px;
+    padding:0px;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0c0c0cc5;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 3px 3px #0c0c0cc5;
+}
+ul{
+    align-items: center;
+    display: flex;
+}
+li>a{
+    font-size: large;
+    margin-left: 50px;
+    color:#8f8e8e;
+    padding: 10px;
+    transition: all ease-in-out 0.5s;
+}
+li>a:hover{
+    color: #0c0c0c;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+body{
+    background-image: url(https://hotelmt.com.br/wp-content/uploads/2019/07/298695-fotografar-viagem-veja-4-dicas-para-tirar-fotos-incriveis.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+h1{
+    font-size: 50px;
+    font-style: italic;
+    font-family: Times, serif;
+}
+p{
+    text-align: justify;
+}
+img{
+    object-fit:cover;
+    width: 25%;
+}
+section{
+    padding: 25px;
+    margin-bottom: 10px;
+}
+main>section{
+    background-color: #00ffff13;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.part2{
+    flex-direction: row-reverse;
+}
+.part3{
+    background-color: #99a52a13;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    color:#6e6c6c;
+    padding: 25px;
+    background-color: #0c0c0cc5;
+}
+@media (min-width:300px) and (max-width: 520px) {
+    ul{
+        flex-direction: column;
+    }
+    img{
+        width: 30%;
+        height: 100px;
+    }
+    section{
+     padding: 0px;   
+    }
+  }
