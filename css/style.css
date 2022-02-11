@@ -1,40 +1,49 @@
 *{
     font-family: sans-serif,'Segoe UI';
-    margin:0px;
-    padding:0px;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-image: url('../assets/298695-fotografar-viagem-veja-4-dicas-para-tirar-fotos-incriveis.jpg');
+    background-size: cover;
+    background-position: 50%;
+    box-sizing: border-box;
 }
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #0c0c0cc5;
+    background-color: #424141c5;
     padding: 25px;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 3px 3px #0c0c0cc5;
+    box-shadow: 0px 0px 3px 3px #424141c5;
+}
+nav{
+    display: flex;
+    align-items: center;
 }
 ul{
-    align-items: center;
+    margin: 0;
     display: flex;
+    align-items: center;
+}
+nav #btn-mobile{
+    display: none;
 }
 li>a{
     font-size: large;
+    display: flex;
+    justify-content: center;
     margin-left: 50px;
-    color:#8f8e8e;
-    padding: 10px;
-    transition: all ease-in-out 0.5s;
+    color:#fff;
+    transition: all ease-in-out 0.3s;
 }
 li>a:hover{
     color: #0c0c0c;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 10px;
-}
-body{
-    background-image: url(https://hotelmt.com.br/wp-content/uploads/2019/07/298695-fotografar-viagem-veja-4-dicas-para-tirar-fotos-incriveis.jpg);
-    background-size: cover;
-    background-position: 50%;
 }
 h1{
     font-size: 50px;
@@ -74,6 +83,30 @@ footer{
     padding: 25px;
     background-color: #0c0c0cc5;
 }
+@media screen and (max-width: 600px){
+    nav #btn-mobile{
+        display: flex;
+    }
+    #menu li{
+        margin-top: 50px;
+    }
+    ul#menu{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 78px;
+        right: -90px;
+        height: calc(100vh - 78px);
+        background-color: #424141c5;
+        transition: all ease-in-out 0.4s;
+        transition-delay: 0.1s;
+        animation: show 0.5s;
+    }
+    ul#menu.show{
+        right: 0;
+        display: flex;
+    }
+}
 @media (min-width:300px) and (max-width: 520px) {
     ul{
         flex-direction: column;
@@ -85,4 +118,12 @@ footer{
     section{
      padding: 0px;   
     }
-  }
+}
+@keyframes show{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+}
